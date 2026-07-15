@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.log
+.claude/settings.local.json
+
+# Internal research notes — contains data marked "do not publish"
+# (personal phone numbers, excluded names, unverified/stale facts).
+# Kept locally only; never push to a public remote.
+docs/
