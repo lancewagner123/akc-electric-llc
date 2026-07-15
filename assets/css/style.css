@@ -34,7 +34,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+/* height: auto pairs with max-width: 100% so scaled-down images keep their
+   ratio — without it, the HTML height attribute wins as a literal pixel
+   value once width is constrained, producing a tall, mostly-cropped box. */
+img { max-width: 100%; height: auto; display: block; }
 
 a { color: inherit; text-decoration: none; }
 
@@ -241,6 +244,24 @@ p:last-child { margin-bottom: 0; }
   padding: 96px 24px 110px;
   max-width: var(--max);
   margin: 0 auto;
+}
+
+/* Desktop: set the hero's height from the photo's own aspect ratio (1700x924,
+   i.e. 54.35% of the width) instead of letting the overlaid text's padding
+   dictate a much taller box that forces object-fit: cover to crop the image
+   down to a thin vertical slice. Capped so very wide monitors don't get an
+   oversized banner; height (not aspect-ratio) is used deliberately so the
+   hero keeps stretching to fill the full width rather than being shrunk to
+   preserve an exact ratio. */
+@media (min-width: 901px) {
+  .hero {
+    height: min(54.35vw, 700px);
+    display: flex;
+    align-items: center;
+  }
+  .hero-inner {
+    padding: 24px;
+  }
 }
 .hero-content { max-width: 620px; }
 .hero h1 { color: var(--white); margin-bottom: 0.4em; }
