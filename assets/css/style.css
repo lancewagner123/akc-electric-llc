@@ -277,18 +277,6 @@ p:last-child { margin-bottom: 0; }
   gap: 14px;
   align-items: center;
 }
-.hero-badges {
-  margin-top: 2.2em;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 24px;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.85);
-}
-.hero-badges span { display: flex; align-items: center; gap: 8px; }
-.hero-badges svg { color: var(--amber-500); flex-shrink: 0; }
-
 /* Page hero (interior pages, no photo) */
 .page-hero {
   background: var(--navy-900);
