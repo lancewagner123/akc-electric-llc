@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.akcelectric.example/sitemap.xml
+Sitemap: https://lancewagner123.github.io/akc-electric-llc/sitemap.xml
