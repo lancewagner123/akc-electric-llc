@@ -353,9 +353,20 @@ p:last-child { margin-bottom: 0; }
 }
 .service-card figcaption .desc { color: var(--ink-soft); font-size: 0.92rem; }
 
-/* Small callout for "available statewide" — same accent color already used for
-   eyebrows and ratings, just bolded, so it stands out without becoming a badge. */
-.statewide { color: var(--amber-600); font-weight: 700; }
+/* Small pill for "available statewide". A plain color+bold treatment didn't read
+   as distinct on this page — amber is already the accent color everywhere
+   (checkmarks, eyebrows, the CTA button), so matching text just blended in. A
+   background + shape stands out regardless of that. */
+.statewide {
+  display: inline-block;
+  background: rgba(245, 166, 35, 0.16);
+  color: var(--amber-600);
+  font-weight: 700;
+  padding: 0.12em 0.55em;
+  border-radius: 999px;
+  font-size: 0.88em;
+  white-space: nowrap;
+}
 
 /* Trust / credentials band */
 .credentials-grid {
@@ -553,7 +564,6 @@ p:last-child { margin-bottom: 0; }
 
   .intro-grid { grid-template-columns: 1fr; gap: 32px; }
   .services-grid { grid-template-columns: 1fr; }
-  .services-more ul { grid-template-columns: 1fr; }
   .credentials-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
