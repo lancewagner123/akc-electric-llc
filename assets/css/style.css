@@ -353,30 +353,9 @@ p:last-child { margin-bottom: 0; }
 }
 .service-card figcaption .desc { color: var(--ink-soft); font-size: 0.92rem; }
 
-.services-more {
-  margin-top: 40px;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 30px 34px;
-}
-.services-more h3 { margin-bottom: 1em; }
-.services-more ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-.services-more li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 600;
-  color: var(--navy-900);
-}
-.services-more svg { color: var(--amber-500); flex-shrink: 0; }
+/* Small callout for "available statewide" — same accent color already used for
+   eyebrows and ratings, just bolded, so it stands out without becoming a badge. */
+.statewide { color: var(--amber-600); font-weight: 700; }
 
 /* Trust / credentials band */
 .credentials-grid {
