@@ -368,6 +368,35 @@ p:last-child { margin-bottom: 0; }
   white-space: nowrap;
 }
 
+/* Professional references — text-only cards beneath the service cards. Mirrors
+   .services-grid (3 columns at desktop) so the two blocks line up symmetrically.
+   An amber left-accent bar per card keeps each entry visually distinct. */
+.references-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.reference-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--amber-500);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  box-shadow: var(--shadow-sm);
+}
+.reference-card .ref-company {
+  display: block;
+  font-weight: 800;
+  color: var(--navy-900);
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+.reference-card .ref-person {
+  display: block;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
 /* Trust / credentials band */
 .credentials-grid {
   display: grid;
@@ -564,6 +593,7 @@ p:last-child { margin-bottom: 0; }
 
   .intro-grid { grid-template-columns: 1fr; gap: 32px; }
   .services-grid { grid-template-columns: 1fr; }
+  .references-grid { grid-template-columns: repeat(2, 1fr); }
   .credentials-grid { grid-template-columns: repeat(2, 1fr); }
   .reviews-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
@@ -573,5 +603,6 @@ p:last-child { margin-bottom: 0; }
 
 @media (max-width: 480px) {
   .credentials-grid { grid-template-columns: 1fr 1fr; }
+  .references-grid { grid-template-columns: 1fr; }
   .section { padding: 56px 0; }
 }
