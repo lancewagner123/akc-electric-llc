@@ -396,6 +396,15 @@ p:last-child { margin-bottom: 0; }
   color: var(--ink-soft);
   font-size: 0.95rem;
 }
+.reference-card .ref-phone {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--amber-600);
+  border-bottom: 1px solid transparent;
+}
+.reference-card .ref-phone:hover { border-bottom-color: currentColor; }
 
 /* Trust / credentials band */
 .credentials-grid {
