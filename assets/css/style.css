@@ -540,6 +540,11 @@ p:last-child { margin-bottom: 0; }
 }
 .footer-brand { color: var(--white); font-weight: 800; font-size: 1.15rem; margin-bottom: 10px; display: flex; align-items: baseline; gap: 8px; }
 .footer-brand .bolt { color: var(--amber-500); }
+/* Without this, the global `p { color: var(--ink-soft) }` rule (dark slate)
+   wins over .site-footer's inherited white, since an explicit rule on the
+   element itself beats an inherited value regardless of the ancestor's
+   specificity — leaves dark-grey-on-navy text otherwise. */
+.footer-tagline { color: rgba(255, 255, 255, 0.8); }
 .footer-col h4 {
   color: var(--white);
   font-size: 0.82rem;
